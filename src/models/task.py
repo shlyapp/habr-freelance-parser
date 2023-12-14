@@ -1,12 +1,13 @@
-from typing import List
 from pydantic import BaseModel
 
+from datetime import datetime
 
 class Task(BaseModel):
     title: str
+    description: str
     id: int
     link: str
     views: int
     responses: int
     price: int
-    tags: List[str]
+    data: datetime
